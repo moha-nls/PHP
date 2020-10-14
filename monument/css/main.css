@@ -1,0 +1,21 @@
+body{
+	font-family: "Palatino Linotype","Times New Roman", Georgia, Serif;
+	/*background-color: #CECECE;*/	
+}
+
+label {
+	font-weight: bold;
+	color: black;
+}
+
+button {
+	font-weight: bold;
+}
+
+input {
+	font-weight: bold;
+	color: #040403;
+}
+
+
+

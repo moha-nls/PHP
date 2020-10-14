@@ -23,7 +23,7 @@
 		catch(PDOException $e) {
 			$message_erreur = "ERREUR PDO dans " . $e->getFile() . " <br>Ligne " . $e->getLine() . " : " . $e->getMessage() . "<br>";
 			$_SESSION['message_erreur'] = $message_erreur;
-			Header("Location: ../views/typemonument/pageerreur.php" );
+			Header("Location: ../../views/PageErreur.php" );
 		}
 	
 		// --------------------------------------------------------------

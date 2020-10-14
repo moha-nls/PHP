@@ -24,48 +24,32 @@
 
 	<!--Fichier CSS de la page-->
     <link rel="stylesheet" href="../../css/main.css" />
-	<?php
+	<?php 
 		session_start();
-		
-		$typeMonument = $_SESSION['typemonument'];
-		$libelle = $typeMonument['Libelle_TYPE_Monument'];
-		$idTypemonument = $typeMonument['ID_TYPE_Monument'];
-		
 	?>
 </head>
 <body>
-	<div class="w3-container w3-black">
-		<h1 >TYPE MONUMENT</h1>
+
+	<div class="w3-container w3-black w3-text-red">
+		<h1>Alerte !</h1>
 	</div>
-	<br>
 	
 	<div class="w3-row">
-		<div class="w3-quarter w3-container">
+		<div class="w3-quarter">
 		&nbsp;
 		</div>
-		<div class="w3-half w3-light-grey w3-border w3-card-4">
-			<div class="w3-container w3-blue">
-				<h2>Suppression d'un type monument </h2>
-			</div>
-			<br><br>
-			<form class="w3-container" action="../../controllers/typemonument/TypeMonumentSupprimerAccept.php" method="post">
-				<p class="w3-text-red"><?php echo $_SESSION['msg_erreur'];?> </p>
-				<br>
-				<label>Libellé</label>
-				<input class="w3-input w3-text-blue" type="text" name="libelle" value="<?php echo $libelle; ?>" disabled>
-				<input type="hidden" name="idTypemonument" value="<?php echo $idTypemonument; ?>">
-				<br><br>
-				<button type="submit" class="w3-btn w3-teal w3-round-large w3-hover-green w3-medium"><i class="fa fa-check" ></i>&nbsp;&nbsp; Confirmer</button>
-				<br><br>
-			</form>	
-			<footer class="w3-brown w3-padding-large w3-right-align">
-				<a href="../../controllers/typemonument/TypeMonumentListerAccept.php" ><button class="w3-btn w3-aqua w3-round-large w3-hover-green w3-medium"><i class="fa fa-hand-o-left" ></i>&nbsp;&nbsp;Retour </button></a>
-			</footer>				
+		<div class="w3-half w3-panel w3-red w3-border w3-card-4 w3-text-white">
+			<p><h2>Message d'erreur</h2></p><br>
+			<p>
+				<?php 
+					echo $_SESSION['message_erreur'];
+				?>
+			</p><br>
 		</div>
-		<div class="w3-quarter w3-container">
+		<div class="w3-quarter ">
 		&nbsp;
 		</div>
-	</div> 		
-
+	</div> 	
+	
 </body>
 </html>
